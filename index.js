@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 app.use(express.static('src'));
+app.use(express.static('./'));
 
 var server = app.listen((process.env.PORT || 3000), function () {
 	var port = server.address().port;

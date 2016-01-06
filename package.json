@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "Movie App",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:seansean11/angularjs-unit-testing.git"
+  },
   "devDependencies": {
+    "angular-mocks": "^1.4.8",
+    "angular-resource": "^1.4.8",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.15",
     "karma-chrome-launcher": "^0.2.1",
@@ -17,6 +23,9 @@
   "author": "Sean",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.4.8",
+    "angular-route": "^1.4.8",
+    "angular-ui-bootstrap": "^0.14.3",
     "express": "^4.13.3"
   }
 }

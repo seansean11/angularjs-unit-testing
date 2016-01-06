@@ -18,6 +18,8 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-resource/angular-resource.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/angular-route/angular-route.min.js',
+      'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js',
       'src/**/*.js',
       'spec/**/*.js'
     ],
