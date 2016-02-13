@@ -7,7 +7,7 @@ angular.module('omdb', [])
       return $http.get(baseUrl + 's=' + encodeURIComponent(query));
     };
     service.find = function(id) {
-      return $http.get(baseUrl + 's=' + id);
+      return $http.get(baseUrl + 'i=' + id);
     };
 
     return service;

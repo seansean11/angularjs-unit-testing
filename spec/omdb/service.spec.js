@@ -28,7 +28,7 @@ describe('omdb service', function() {
 
   it('should handle error', function() {
     var response;
-    $httpBackend.expect('GET', 'http://www.omdbapi.com/?v=1&s=tt0076759')
+    $httpBackend.expect('GET', 'http://www.omdbapi.com/?v=1&i=tt0076759')
       .respond(500, movieDataById);
 
     omdbApi.find('tt0076759')
@@ -43,7 +43,7 @@ describe('omdb service', function() {
 
   it('should return movie by id', function() {
     var response;
-    $httpBackend.expect('GET', 'http://www.omdbapi.com/?v=1&s=tt0076759')
+    $httpBackend.expect('GET', 'http://www.omdbapi.com/?v=1&i=tt0076759')
       .respond(200, movieDataById);
 
     omdbApi.find('tt0076759')
