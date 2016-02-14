@@ -2,16 +2,22 @@ describe('Results Controller', function() {
 
 	var results = [
 	{
-		"Title":"Star Wars: Episode IV - A New Hope",
-		"imdbID":"tt0076759",
+		data:	{
+			"Title":"Star Wars: Episode IV - A New Hope",
+			"imdbID":"tt0076759",
+		}
 	},
 	{
-		"Title":"Star Wars: Episode V - The Empire Strikes Back",
-		"imdbID":"tt0080684",
+		data: {
+			"Title":"Star Wars: Episode V - The Empire Strikes Back",
+			"imdbID":"tt0080684",
+		}
 	},
 	{
-		"Title":"Star Wars: Episode VI - Return of The Jedi",
-		"imdbID":"tt0086190",
+		data: {
+			"Title":"Star Wars: Episode VI - Return of The Jedi",
+			"imdbID":"tt0086190",
+		}
 	}
 ];
 
@@ -59,15 +65,15 @@ describe('Results Controller', function() {
 
   it('should rotate movie every 5 seconds', function() {
   	// should have a default movie
-  	expect($scope.result.Title).toBe(results[0].Title);
+  	expect($scope.result.Title).toBe(results[0].data.Title);
   	// should update after 5 seconds
   	$interval.flush(5000);
-  	expect($scope.result.Title).toBe(results[1].Title);
+  	expect($scope.result.Title).toBe(results[1].data.Title);
   	// should update after 5 seconds
   	$interval.flush(5000);
-  	expect($scope.result.Title).toBe(results[2].Title);
+  	expect($scope.result.Title).toBe(results[2].data.Title);
   	// should return to default
-	$interval.flush(5000);
-  	expect($scope.result.Title).toBe(results[0].Title);
+		$interval.flush(5000);
+  	expect($scope.result.Title).toBe(results[0].data.Title);
   });
 });

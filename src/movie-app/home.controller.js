@@ -6,7 +6,7 @@ angular.module('movieApp')
 		var findMovie = function(id) {
 			omdbApi.find(id)
 				.then(function(data) {
-					$scope.result = data;
+					$scope.result = data.data;
 				});
 		}
 
